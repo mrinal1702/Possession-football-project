@@ -1,12 +1,8 @@
-﻿# Possession Football Project
+# Possession Football Project
 
-Jupyter analysis of football possession data.
+Exploratory analysis of football possession data using Python and Jupyter.
 
-## Files
-- Possession_Project.ipynb  main analysis notebook  
-- Data/GitHub_Possession_Project.xlsx  source Excel (multiple sheets)
+## Overview
+This repo contains a single notebook that loads an Excel workbook with multiple sheets (results, possession, shots, standard stats, defensive stats), cleans/joins them, and answers key questions about possession.
 
-## Run
-1) pip install -r requirements.txt
-2) Open the notebook in Jupyter and run.
-
+## Repo Structure
