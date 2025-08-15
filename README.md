@@ -40,4 +40,20 @@ To quantify the relationship between possession and points, I ran a simple **Ord
 **Interpretation:**  
 Possession does matter, but the majority of variation in points (about 73%) is explained by **other factors** — such as shot quality, finishing, defensive solidity, game state, and perhaps sheer chaos.
 
+### Step 3 — Beyond possession: adding progressive passes
+
+Possession tells us *who* had the ball, but not *what they did with it*.  
+So the next step was to include **progressive passes (`PrgP`)** in the model — a metric that counts forward passes advancing the ball significantly towards the opponent’s goal.
+
+The idea: see if we can improve our explanatory power (R²) by measuring attacking intent, not just ball control.
+
+**Regression results (key points):**
+- **R-squared:** 0.68 → a big jump from 0.27 earlier. This model explains about **68% of the variation** in points.
+- **Coefficient for Progressive Passes:** ~+0.106 → Each extra progressive pass over the season is associated with about 0.1 additional points.
+- **Coefficient for Possession:** ~–3.27 → Surprisingly negative!  
+  This doesn’t mean possession is bad — rather, once progressive passes are accounted for, high possession *without progression* might reflect slower, less incisive play.
+- **p-values:** Progressive passes (p < 0.001) are a very strong predictor; possession (p ≈ 0.011) is still statistically significant, but in the opposite direction.
+
+**Takeaway:** Progressive passing is a much stronger explanatory factor than raw possession. Teams that keep the ball but fail to move it forward quickly may underperform compared to more direct teams.
+
 
