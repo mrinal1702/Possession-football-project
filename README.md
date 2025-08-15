@@ -14,3 +14,4 @@ This project explores the link between possession and success in the Premier Lea
 - Conduct basic statistical analysis (details in the notebook).
 - Define the scope for further analysis in future iterations.
 
+![Possession vs Points](images/possession_vs_points.png)
