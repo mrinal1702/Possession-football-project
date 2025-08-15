@@ -56,4 +56,43 @@ The idea: see if we can improve our explanatory power (R²) by measuring attacki
 
 **Takeaway:** Progressive passing is a much stronger explanatory factor than raw possession. Teams that keep the ball but fail to move it forward quickly may underperform compared to more direct teams.
 
+### Step 4 — Predicted vs Actual Points
+
+Here's a visual depiction of how the model predicted teams to finish and where they actually finished:
+
+![Predicted vs Actual Points](images/predicted_vs_actual_points.png)
+
+This chart plots the **predicted points** from our possession + progressive passes model against the **actual points** each team earned.  
+The closer a team lies to the diagonal line, the more accurate the model’s prediction.
+
+Compared to the simple possession chart earlier, this model does a much better job of explaining team performance — exactly as we expected after adding progressive passes.
+
+- **Liverpool**: In the possession-only chart, Liverpool was far above the trendline; here, the model explains their points much better.  
+- **Manchester United**: Similarly, now sits closer to the diagonal, suggesting the model captures more of their performance factors.  
+- **Nottingham Forest**: Still an outlier, but much better explained than before.  
+- **Chelsea**: Emerges as a positive outlier — they earned more points than their possession + progressive passes stats would predict.  
+- **Tottenham**: A notable negative outlier — finished with fewer points than predicted.  
+- **Leicester City, Southampton, and Ipswich Town**: Also underperformed, earning far fewer points than the model expected.
+
+**Takeaway:** Incorporating progressive passes not only improved the statistical fit (R² from 0.27 → 0.68) but also made the model’s predictions align much more closely with reality for most teams.
+
+
+### Step 5 — Adding attacking penalty area touches and shot-creating actions
+
+We’re still chasing the question: *How much of a team’s points can be explained by what they do on the ball?*  
+
+After possession and progressive passes, I suspected there was still room to improve the model’s predictive power.  
+So I added two more attacking metrics:  
+
+- **Touches in the attacking penalty area (`Att Pen`)**
+- **Shot-creating actions (`SCA`)**
+
+**Key results:**
+- **R-squared:** ~0.85 → The model now explains about **85% of the variation** in points, a big jump from our earlier versions.
+- **Attacking Penalty Area Touches:** Positive and statistically significant — each additional touch in this zone over the season correlates with higher points.
+- **Shot-Creating Actions:** Positive coefficient, but not statistically significant at the 5% level in this sample.
+- **Possession & Progressive Passes:** Both coefficients turned negative — a result of **multicollinearity**, where variables overlap and “compete” to explain the same part of the variation.  
+  In other words, once we control for penalty area touches and SCAs, possession and progressive passes on their own no longer add unique explanatory power — and may even capture slower, less direct play in this context.
+
+**Takeaway:** Combining possession with direct attacking actions gives us a much richer picture. While possession and progression metrics matter, the real points boost comes from getting the ball into dangerous areas and creating chances.
 
