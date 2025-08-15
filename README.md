@@ -96,3 +96,42 @@ So I added two more attacking metrics:
 
 **Takeaway:** Combining possession with direct attacking actions gives us a much richer picture. While possession and progression metrics matter, the real points boost comes from getting the ball into dangerous areas and creating chances.
 
+### Step 6 — Predicted vs Actual Points (V3: All Metrics Included)
+
+After adding **attacking penalty area touches** and **shot-creating actions** to our possession and progressive passes model, here’s the updated predicted vs actual points chart:
+
+![Predicted vs Actual Points V3](images/predicted_vs_actual_points_v3.png)
+
+**Observations:**
+- **Leicester City** is no longer a significant laggard. This likely reflects their weakness in shot-creating actions and touches in the box, despite having decent possession and progressive pass numbers.
+- **Chelsea** now sits much closer to the model’s predictions, suggesting stronger attacking involvement in the final third and more chance creation than the earlier models captured.
+- Teams towards the **top of the table** are explained better by this model than those near the bottom.  
+  This may be due to factors not included here, such as:
+  - Defensive mistakes
+  - Finishing quality
+  - Set-piece performance
+  - Goalkeeper quality
+  - Overall defensive organisation
+  - Pressing effectiveness
+  - Other tactical and qualitative aspects
+
+---
+
+### Conclusion
+
+- **Possession** alone is loosely correlated with season points.
+- **Quality of possession** — progressing the ball, creating chances, and getting into dangerous areas — does a much better job of explaining points over a season.
+- **Player quality matters:**  
+  - At the top of the table, the model explains results more accurately, possibly because top teams execute the attacking fundamentals more consistently.
+  - At the bottom, results are more influenced by factors outside of possession and attacking metrics — defensive structure, goalkeeper performance, and other basics.
+
+---
+
+### Scope for Further Analysis
+
+- Add data from more teams and leagues to get a broader view.
+- Include multiple seasons to check if the patterns hold over time.
+- Explore the changing importance of possession quality year-on-year.
+- Incorporate defensive metrics, pressing stats, finishing quality, and set-piece performance to improve the model’s explanatory power.
+
+
